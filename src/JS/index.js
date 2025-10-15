@@ -1,6 +1,5 @@
 import '../styles/main.css';
-
-import { CityAPI , meteoville} from './api';   
+import { CityAPI , meteoville} from './api'; 
 
 document.addEventListener('DOMContentLoaded' , async()=>{
     const api = new CityAPI();
@@ -10,7 +9,6 @@ document.addEventListener('DOMContentLoaded' , async()=>{
     const resulDiv = document.querySelector('.result');
     const meteoDetails = document.querySelector('.meteo-details');
 
-   
     button.addEventListener('click', async()=>{
         const ville = input.value.trim();
 
@@ -36,22 +34,46 @@ document.addEventListener('DOMContentLoaded' , async()=>{
                 return;
             }
 
-            resulDiv.innerHTML =`
-            <h2>Information sur la ville :</h2>
-            <p><strong>ville : </strong> ${villeaff.city}</p>
-            <p><strong>Code postal : </strong> ${villeaff.postcode}</p>
-            <p><strong>Région : </strong> ${villeaff.context}</p>
-            <p><strong>Latitude : </strong> ${lat} ${lon}</p>
-           
+            resulDiv.innerHTML = `
+            <div class="ville-info" style="background:white; padding:1rem; border-radius:8px; box-shadow:0 4px 10px rgba(0,0,0,0.1)">;
+                <h2>Information sur la ville :</h2>
+                <p><strong>ville : </strong> ${villeaff.city}</p>
+                <p><strong>Code postal : </strong> ${villeaff.postcode}</p>
+                <p><strong>Région : </strong> ${villeaff.context}</p>
+                <p><strong>Latitude : </strong> ${lat} ${lon}</p>
+            </div>
         `;
-            meteoDetails.innerHTML = `
-            <h2>Données météorologiques :</h2>
-            <p><strong>Description : </strong> ${meteoData.weather[0].description}</p>
-            <p><strong>Température : </strong> ${meteoData.main.temp} °C</p>
-            <p><strong>Humidité : </strong> ${meteoData.main.humidity} %</p>
-            <p><strong>Vitesse du vent : </strong> ${meteoData.wind.speed} m/s</p>
-        
-            `;
+           meteoDetails.innerHTML = `
+            <h2>${villeaff.city}</h2>
+            <div class="temperature">${Math.round(meteoData.main.temp)}°C</div>
+            <p>${meteoData.weather[0].description}</p>
+
+            <div class="meteo-cards">
+                <div class="meteo-card">
+                   <p><strong>Humidité</strong></p>
+                   <p>${meteoData.main.humidity} %</p>
+            </div>
+            <div class="meteo-card">
+                  <p><strong>Vent</strong></p>
+                  <p>${(meteoData.wind.speed * 3.6).toFixed(1)} km/h</p>
+            </div>
+            <div class="meteo-card">
+                 <p><strong>Température min</strong></p>
+                 <p>${meteoData.main.temp_min} °C</p>
+            </div>
+            <div class="meteo-card">
+                 <p><strong>Température max</strong></p>
+                 <p>${meteoData.main.temp_max} °C</p>
+            </div>
+
+            <div class="meteo-card">
+                 <p><strong>Pression</strong></p>
+                 <p>${meteoData.main.pressure} hPa</p>
+            </div>
+            <div class="meteo-card
+        </div>
+     `;
+
         }
         catch(error){
             console.error("Erreur :", error);

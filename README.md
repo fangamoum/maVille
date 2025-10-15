@@ -50,15 +50,14 @@ cd maVille
 2) Installer les dependances
    ## npm install 
 
-3) Créer la version de production
-  ## npm run build
-  les fichier serons generés dans le dossier dist/.
-
-4) Lancer le serveur de développement
+3) Lancer le serveur de développement
   ## npm run start
 L’application s’ouvrira automatiquement dans votre navigateur 
 http://localhost:8080
 
+4) Créer la version de production
+  ## npm run build
+  les fichier serons generés dans le dossier dist/.
 
 ## Diagramme de classe
 Le diagramme ci-dessous illustre la structure orientée objet de l’application **maVille**, incluant les relations entre les classes principales (Ville, Meteo).
