@@ -40,7 +40,8 @@ document.addEventListener('DOMContentLoaded' , async()=>{
                 <p><strong>ville : </strong> ${villeaff.city}</p>
                 <p><strong>Code postal : </strong> ${villeaff.postcode}</p>
                 <p><strong>Région : </strong> ${villeaff.context}</p>
-                <p><strong>Latitude : </strong> ${lat} ${lon}</p>
+                <p><strong>Latitude : </strong> ${lat}</p>
+                <p><strong>Longitude : </strong>${lon}</p>
             </div>
         `;
            meteoDetails.innerHTML = `
