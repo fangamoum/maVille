@@ -21,6 +21,28 @@ export class CityAPI {
     }  
 }
 
+export class cityDemography{
+    constructor(){
+        this.baseURL = 'https://geo.api.gouv.fr/communes';
+    }
+
+    async getDemography(cityName){
+        try{
+            const response = await fetch(`${this.baseURL}?nom=${cityName}&fields=population`);
+            if(!response.ok){
+                throw new Error('Erreur lors de la requete demographie');
+            }
+            const data = await response.json();
+            return data;
+        }
+        catch(error){{
+            console.error(error);
+            return null;
+        }
+    }
+}
+
+}
  export class meteoville {
         constructor(){
             this.baseURL = 'https://api.openweathermap.org/data/2.5/weather';
