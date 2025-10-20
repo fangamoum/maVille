@@ -60,6 +60,7 @@ document.addEventListener('DOMContentLoaded' , async()=>{
 
                 ${demographyData ? `
                 <p><strong>Population : </strong> ${demographyData[0].population}</p>
+               
 
                 ` : '<p>Données démographiques non disponibles</p>'}
             </div>

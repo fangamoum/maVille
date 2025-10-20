@@ -6,7 +6,7 @@
 - Mail universitaire :mamady.fangamou@etu.univ-amu.fr
 
 ## Description du projet
-maVille est une application web qui permet à l'utilisateur de rechercher une ville en France et d'obtenir des informations principales ainsi que la météo en temps réel :
+maVille est une application web qui permet à l'utilisateur de rechercher une ville en France et d'obtenir des informations principales sur la ville ainsi que la météo en temps réel :
 
 L’application repose sur deux requêtes API dépendantes :
 1) Recherche d’une ville via  **api-adresse.data.gouv.fr**
@@ -22,25 +22,8 @@ L’utilisateur saisit le nom d’une ville, l’application récupère son nom 
 - APIs : **api-adresse.data.gouv.fr**, **OpenWeatherMap**
 
 ## Arborescence des fichiers
-maVille/
-│
-├── dist/
-│   ├── bundle.js
-│   └── index.html
-│
-├── src/
-│   ├── assets/
-│   ├── JS/
-│   │   ├── api.js
-│   │   └── index.js
-│   ├── styles/
-│   │   └── main.css
-│   └── index.html
-│
-├── package.json
-├── package-lock.json
-├── webpack.config.js
-└── Readme.md
+l'image ci-dessous illustre l'aborescence du projet
+[arborescence](./src/assets/arborescence.jpg)
 
 ## installation et execution 
 1) cloner le depot 
