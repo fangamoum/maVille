@@ -1,11 +1,10 @@
 import '../styles/main.css';
 import logo from '../assets/logo.png' ;
 
-import { CityAPI , cityDemography , meteoville} from './api'; 
+import { CityAPI , meteoville} from './api'; 
 
 document.addEventListener('DOMContentLoaded' , async()=>{
     const api = new CityAPI();
-    const demographie = new cityDemography();
     const meteo = new meteoville();
 
     const input = document.querySelector('#cityInput');
@@ -40,7 +39,6 @@ document.addEventListener('DOMContentLoaded' , async()=>{
             }
 
             const villeaff = features[0].properties;
-            const demographyData = await demographie.getDemography(villeaff.city);
             const [lon , lat] = features[0].geometry.coordinates;
 
             const meteoData = await meteo.getMeteo (lat , lon);
@@ -58,11 +56,6 @@ document.addEventListener('DOMContentLoaded' , async()=>{
                 <p><strong>Latitude : </strong> ${lat}</p>
                 <p><strong>Longitude : </strong>${lon}</p>
 
-                ${demographyData ? `
-                <p><strong>Population : </strong> ${demographyData[0].population}</p>
-               
-
-                ` : '<p>Données démographiques non disponibles</p>'}
             </div>
         `;
            meteoDetails.innerHTML = `
