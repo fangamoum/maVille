@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded' , async()=>{
             const features = await api.searchCity(ville);
 
             if(features.length === 0){
-                resulDiv.innerHTML = `<p style='color:red;'>Aucune ville trouvée pour "${ville}".</p>`;
+                resulDiv.innerHTML = `<p style='color:red; text-align:center'>Aucune ville trouvée pour "${ville}".</p>`;
                 return;
             }
 
@@ -48,8 +48,8 @@ document.addEventListener('DOMContentLoaded' , async()=>{
             }
 
             resulDiv.innerHTML = `
-            <div class="ville-info" style="background:white; padding:1rem; border-radius:8px; box-shadow:0 4px 10px rgba(0,0,0,0.1)">
-                <h2>Information sur la ville :</h2>
+            <div class="ville-info" style="background:#bad8ec; padding:1rem; border-radius:15px; box-shadow:0 4px 10px rgba(0,0,0,0.1)">
+                <h2 style=" text-decoration: underline">Information sur la ville :</h2>
                 <p><strong>ville : </strong> ${villeaff.city}</p>
                 <p><strong>Code postal : </strong> ${villeaff.postcode}</p>
                 <p><strong>Région : </strong> ${villeaff.context}</p>
@@ -59,9 +59,9 @@ document.addEventListener('DOMContentLoaded' , async()=>{
             </div>
         `;
            meteoDetails.innerHTML = `
-           <div class="meteo-overview" style="background:white; padding:1rem; border-radius:8px; box-shadow:0 4px 10px rgba(0,0,0,0.1)">
+           <div class="meteo-overview" style="background:whitesmoke; padding:1rem; border-radius:15px; box-shadow:0 4px 10px rgba(0,0,0,0.1)">
               <h2>Données Méteologiques :</h2>
-            <h2>${villeaff.city}</h2>
+            <h2 style="text-align:center">${villeaff.city}</h2>
             <div class="temperature">${Math.round(meteoData.main.temp)}°C</div>
             <p>${meteoData.weather[0].description}</p>
 
@@ -82,10 +82,15 @@ document.addEventListener('DOMContentLoaded' , async()=>{
                  <p><strong>Température max</strong></p>
                  <p>${meteoData.main.temp_max} °C</p>
             </div>
-
+    
             <div class="meteo-card">
                  <p><strong>Pression</strong></p>
                  <p>${meteoData.main.pressure} hPa</p>
+            </div>
+             
+            <div class="meteo-card">
+                 <p><strong>Visibilité</strong></p>
+                 <p>${(meteoData.visibility / 1000).toFixed(1)} km</p>
             </div>
             <div class="meteo-card
         </div>

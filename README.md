@@ -23,7 +23,7 @@ L’utilisateur saisit le nom d’une ville, l’application récupère son nom 
 
 ## Arborescence des fichiers
 cliquer ici [arborescence](./src/assets/arborescence.jpg) 
-pour voir l'arborescence des fichiers.
+pour voir l'aborescence des fichiers.
 
 ## installation et execution 
 1) cloner le depot 
