@@ -20,6 +20,7 @@ export class CityAPI {
         }
     }  
 }
+
  export class meteoville {
         constructor(){
             this.baseURL = 'https://api.openweathermap.org/data/2.5/weather';

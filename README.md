@@ -22,8 +22,8 @@ L’utilisateur saisit le nom d’une ville, l’application récupère son nom 
 - APIs : **api-adresse.data.gouv.fr**, **OpenWeatherMap**
 
 ## Arborescence des fichiers
-l'image ci-dessous illustre l'aborescence du projet
-[arborescence](./src/assets/arborescence.jpg)
+cliquer ici [arborescence](./src/assets/arborescence.jpg) 
+pour voir l'arborescence des fichiers.
 
 ## installation et execution 
 1) cloner le depot 
@@ -31,7 +31,7 @@ git clone  https://github.com/fangamoum/maVille.git
 cd maVille
 
 2) Installer les dependances
-   ## npm install 
+  ## npm install 
 
 3) Lancer le serveur de développement
   ## npm run start
