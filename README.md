@@ -44,4 +44,8 @@ http://localhost:8080
 
 ## Diagramme de classe
 Le diagramme ci-dessous illustre la structure orientée objet de l’application **maVille**, incluant les relations entre les classes principales (Ville, Meteo).
-[Diagramme de classes](./src/assets/20251015_043430.jpg)
+
+Ville : recherche les coordonnées d’une ville
+Meteo : récupère et affiche les informations météo correspondantes
+
+[Diagramme de classes](./src/assets/diag_classe.jpg)
