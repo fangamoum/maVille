@@ -21,6 +21,17 @@ L’utilisateur saisit le nom d’une ville, l’application récupère son nom 
 - Webpack (gestion des modules, CSS, images)
 - APIs : **api-adresse.data.gouv.fr**, **OpenWeatherMap**
 
+## Fonctionnement de l’application
+L’utilisateur saisit une ville dans le champ de recherche.
+
+L’application appelle la méthode searchCity() de la classe CityAPI, qui interroge l’API d’adresses pour récupérer les informations de la ville.
+
+Une fois les coordonnées (latitude, longitude) obtenues, elles sont transmises à la méthode getMeteo() de la classe MeteoVille.
+
+Les données météorologiques renvoyées sont ensuite affichées dynamiquement dans l’interface (température, description, humidité, vent etc).
+
+L’interface est simple, responsive et compatible avec les navigateurs récents.
+
 ## Arborescence des fichiers
 cliquer ici [arborescence](./src/assets/arborescence.jpg) 
 pour voir l'aborescence des fichiers.
@@ -43,9 +54,9 @@ http://localhost:8080
   les fichier serons generés dans le dossier dist/.
 
 ## Diagramme de classe
-Le diagramme ci-dessous illustre la structure orientée objet de l’application **maVille**, incluant les relations entre les classes principales (Ville, Meteo).
+Le diagramme ci-dessous illustre la structure orientée objet de l’application **maVille**, incluant les relations entre les classes principales (CityAPI, meteoville).
 
-Ville : recherche les coordonnées d’une ville
-Meteo : récupère et affiche les informations météo correspondantes
+CityAPI : recherche les coordonnées d’une ville
+meteoville : récupère et affiche les informations météo correspondantes
 
 [Diagramme de classes](./src/assets/diag_classe.jpg)
