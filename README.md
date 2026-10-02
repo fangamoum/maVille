@@ -3,7 +3,6 @@
 ## Étudiant
 - Nom :FANGAMOU
 - Prénom :Mamady
-- Mail universitaire :mamady.fangamou@etu.univ-amu.fr
 
 ## Description du projet
 maVille est une application web qui permet à l'utilisateur de rechercher une ville en France et d'obtenir des informations principales sur la ville ainsi que la météo en temps réel :
